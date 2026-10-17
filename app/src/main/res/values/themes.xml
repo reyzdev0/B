@@ -1,0 +1,18 @@
+<resources>
+    <style name="Theme.SaveQuest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/sq_green_2</item>
+        <item name="colorSecondary">@color/sq_green_1</item>
+        <item name="android:windowBackground">@color/sq_bg</item>
+        <item name="android:statusBarColor">@color/sq_bg</item>
+        <item name="android:navigationBarColor">@color/sq_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColorPrimary">@color/sq_text</item>
+    </style>
+
+    <style name="Theme.SaveQuest.Lock" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_lock</item>
+        <item name="android:statusBarColor">#0B0F1E</item>
+        <item name="android:navigationBarColor">#0A2230</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

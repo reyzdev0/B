@@ -1,0 +1,55 @@
+name: Build APK
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.5
+
+      - name: Hapus file sisa versi lama
+        run: |
+          rm -rf app/src/main/java/com/savequest/app/ui/dashboard
+          rm -f app/src/main/java/com/savequest/app/ui/common/DialogUtil.java
+          rm -f app/src/main/res/drawable/bg_avatar.xml
+
+      - name: Build APK
+        run: gradle assembleDebug
+
+      - name: Siapkan berkas rilis
+        run: |
+          VC=$((1000 + GITHUB_RUN_NUMBER))
+          cp app/build/outputs/apk/debug/app-debug.apk "SaveQuest-v2.2.${GITHUB_RUN_NUMBER}.apk"
+          echo "VC=$VC" >> "$GITHUB_ENV"
+          echo "APK=SaveQuest-v2.2.${GITHUB_RUN_NUMBER}.apk" >> "$GITHUB_ENV"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SaveQuest-v2.2-apk
+          path: ${{ env.APK }}
+
+      # Rilis publik: dibaca fitur update dalam aplikasi (repo harus publik)
+      - name: Publikasikan rilis
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v2.2.${{ github.run_number }}
+          name: SaveQuest v2.2.${{ github.run_number }}
+          body: |
+            versionCode: ${{ env.VC }}
+            versionName: 2.2.${{ github.run_number }}
+
+            Build otomatis dari commit ${{ github.sha }}.
+          files: ${{ env.APK }}

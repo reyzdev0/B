@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="64dp" android:height="64dp" android:viewportWidth="64" android:viewportHeight="64">
+    <path android:pathData="M16,42 C4,40 0,26 4,14 C10,22 18,26 24,30 Z" android:fillColor="#FFF8E1" />
+    <path android:pathData="M48,42 C60,40 64,26 60,14 C54,22 46,26 40,30 Z" android:fillColor="#FFF8E1" />
+    <path android:pathData="M10,62 L17,40 L47,40 L54,62 Z" android:fillColor="#7B1FA2" />
+    <path android:pathData="M14,60 C14,45 22,39 32,39 C42,39 50,45 50,60 Z" android:fillColor="#FFB300" />
+    <path android:pathData="M32,10 A16,16 0 1 0 32,42 A16,16 0 1 0 32,10 Z" android:fillColor="#33FFF176" />
+    <path android:pathData="M32,15 A11,11 0 1 0 32,37 A11,11 0 1 0 32,15 Z" android:fillColor="#FFD7B5" />
+    <path android:pathData="M28,25.4 A1.6,1.6 0 1 0 28,28.6 A1.6,1.6 0 1 0 28,25.4 Z" android:fillColor="#3E2723" />
+    <path android:pathData="M36,25.4 A1.6,1.6 0 1 0 36,28.6 A1.6,1.6 0 1 0 36,25.4 Z" android:fillColor="#3E2723" />
+    <path android:pathData="M29,32 Q32,34.5 35,32" android:strokeColor="#8D4B3C" android:strokeWidth="1.2" android:strokeLineCap="round" />
+    <path android:pathData="M20,25 C20,13 26,9 32,9 C38,9 44,13 44,25 Z" android:fillColor="#FFD54F" />
+    <path android:pathData="M31,14 H33 V26 H31 Z" android:fillColor="#FFA000" />
+    <path android:pathData="M32,0.5 L33.7,4.4 L38,4.8 L34.8,7.6 L35.8,11.8 L32,9.6 L28.2,11.8 L29.2,7.6 L26,4.8 L30.3,4.4 Z" android:fillColor="#FFD54F" />
+    <path android:pathData="M6,38 H20 V48 C20,54 13,58 13,58 C13,58 6,54 6,48 Z" android:fillColor="#FFF176" android:strokeColor="#FF8F00" android:strokeWidth="1.5" android:strokeLineCap="round" />
+    <path android:pathData="M52,18 L55,18 L55,44 L52,44 Z" android:fillColor="#ECEFF1" />
+    <path android:pathData="M48,44 H59 V46.5 H48 Z" android:fillColor="#8D6E63" />
+    <path android:pathData="M52.5,46.5 H54.5 V52 H52.5 Z" android:fillColor="#6D4C41" />
+</vector>

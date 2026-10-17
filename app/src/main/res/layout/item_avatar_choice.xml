@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <FrameLayout
+        android:layout_width="78dp"
+        android:layout_height="78dp">
+
+        <com.savequest.app.ui.views.AvatarView
+            android:id="@+id/choiceAvatar"
+            android:layout_width="78dp"
+            android:layout_height="78dp" />
+
+        <ImageView
+            android:id="@+id/choiceLock"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|end"
+            android:background="@drawable/bg_chip"
+            android:padding="5dp"
+            android:src="@drawable/ic_lock"
+            android:tint="@color/sq_text_dim" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/choiceName"
+        style="@style/SqBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/choiceStatus"
+        style="@style/SqCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp" />
+</LinearLayout>

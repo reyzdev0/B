@@ -1,0 +1,25 @@
+<resources>
+    <color name="sq_bg">#F2F4F8</color>
+    <color name="sq_surface">#FFFFFF</color>
+    <color name="sq_surface_alt">#EBEFF4</color>
+    <color name="sq_text">#1B2430</color>
+    <color name="sq_text_dim">#6B7685</color>
+    <color name="sq_stroke">#DDE3EC</color>
+    <color name="sq_icon_inactive">#5F6B7A</color>
+    <color name="sq_locked">#C5CCD6</color>
+    <color name="sq_green_1">#66BB6A</color>
+    <color name="sq_green_2">#2E9D4F</color>
+    <color name="sq_red_1">#EF5350</color>
+    <color name="sq_red_2">#C62828</color>
+    <color name="sq_gold_1">#FFCA28</color>
+    <color name="sq_gold_2">#FB8C00</color>
+    <color name="sq_purple_1">#8E7CFF</color>
+    <color name="sq_purple_2">#5B3FD6</color>
+    <color name="sq_cyan">#00E5FF</color>
+    <color name="sq_orange">#FF7A1A</color>
+    <color name="sq_heat_0">#EBEDF0</color>
+    <color name="sq_heat_1">#9BE9A8</color>
+    <color name="sq_heat_2">#40C463</color>
+    <color name="sq_heat_3">#30A14E</color>
+    <color name="sq_heat_4">#216E39</color>
+</resources>

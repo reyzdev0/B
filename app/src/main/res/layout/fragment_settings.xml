@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="120dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/SqH1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengaturan"
+            android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_icon_tile"
+                android:padding="9dp"
+                android:src="@drawable/ic_upload"
+                android:tint="@color/sq_green_2" />
+
+            <TextView
+                style="@style/SqSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Backup &amp; Restore" />
+        </LinearLayout>
+
+        <TextView style="@style/SqCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Simpan seluruh data ke file JSON, atau pulihkan dari backup." />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+            <TextView android:id="@+id/btnExport" style="@style/SqBtn" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"  android:text="Export JSON" />
+            <TextView android:id="@+id/btnImport" style="@style/SqBtnGhost" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:text="Import JSON" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_icon_tile"
+                android:padding="9dp"
+                android:src="@drawable/ic_bell"
+                android:tint="@color/sq_green_2" />
+
+            <TextView
+                style="@style/SqSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Pengingat Harian Pintar" />
+        </LinearLayout>
+
+        <TextView style="@style/SqCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Hanya berbunyi jika hari ini belum menabung; pesannya menyesuaikan streak." />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swReminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Aktifkan pengingat harian"
+            android:textColor="@color/sq_text"
+            android:textSize="14sp" />
+        <LinearLayout
+            android:id="@+id/rowReminderTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_btn_ghost"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="14dp">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_clock" android:tint="@color/sq_text" />
+            <TextView style="@style/SqBody" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_weight="1" android:text="Waktu pengingat" />
+            <TextView android:id="@+id/tvReminderTime" style="@style/SqBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_icon_tile"
+                android:padding="9dp"
+                android:src="@drawable/ic_trend"
+                android:tint="@color/sq_green_2" />
+
+            <TextView
+                style="@style/SqSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Simulator Keuangan" />
+        </LinearLayout>
+
+        <TextView style="@style/SqCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Hitung estimasi durasi sampai target tabunganmu tercapai." />
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="vertical"><TextView android:id="@+id/btnSimulator" style="@style/SqBtn" android:layout_width="match_parent" android:layout_height="wrap_content"  android:text="Buka simulator" /></LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_icon_tile"
+                android:padding="9dp"
+                android:src="@drawable/ic_shield"
+                android:tint="@color/sq_green_2" />
+
+            <TextView
+                style="@style/SqSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Keamanan" />
+        </LinearLayout>
+
+        <TextView style="@style/SqCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Atur biometrik dan ganti PIN." />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swBiometric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Kunci dengan biometrik (sidik jari)"
+            android:textColor="@color/sq_text"
+            android:textSize="14sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="vertical">
+            <TextView android:id="@+id/btnChangePin" style="@style/SqBtnGhost" android:layout_width="match_parent" android:layout_height="wrap_content"  android:text="Ubah PIN" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_icon_tile"
+                android:padding="9dp"
+                android:src="@drawable/ic_volume"
+                android:tint="@color/sq_green_2" />
+
+            <TextView
+                style="@style/SqSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Suara &amp; Haptic" />
+        </LinearLayout>
+
+        <TextView style="@style/SqCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Sesuaikan efek suara dan getaran." />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swSound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Efek suara"
+            android:textColor="@color/sq_text"
+            android:textSize="14sp" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swHaptic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Getaran (haptic)"
+            android:textColor="@color/sq_text"
+            android:textSize="14sp" />
+        <TextView style="@style/SqCaption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Kekuatan getaran: lembut - sedang - kuat" />
+        <SeekBar
+            android:id="@+id/seekHaptic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="2" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical">
+            <TextView android:id="@+id/btnTestFx" style="@style/SqBtnGhost" android:layout_width="match_parent" android:layout_height="wrap_content"  android:text="Coba efek" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_icon_tile"
+                android:padding="9dp"
+                android:src="@drawable/ic_file"
+                android:tint="@color/sq_green_2" />
+
+            <TextView
+                style="@style/SqSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Laporan Keuangan" />
+        </LinearLayout>
+
+        <TextView style="@style/SqCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Unduh rekap tabungan dan riwayat transaksi harian atau bulanan." />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="vertical">
+            <TextView android:id="@+id/btnReport" style="@style/SqBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Buat laporan (PDF / CSV)" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_icon_tile"
+                android:padding="9dp"
+                android:src="@drawable/ic_music"
+                android:tint="@color/sq_green_2" />
+
+            <TextView
+                style="@style/SqSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Musik Latar RPG" />
+        </LinearLayout>
+
+        <TextView style="@style/SqCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Musik santai saat app dibuka. Tombol mute cepat ada di halaman Home." />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swBgm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Putar musik latar"
+            android:textColor="@color/sq_text"
+            android:textSize="14sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+            <TextView android:id="@+id/chipTrack0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:clickable="true" android:focusable="true" android:gravity="center" android:padding="10dp" android:text="Desa Pagi" android:textSize="12sp" android:textStyle="bold" />
+            <TextView android:id="@+id/chipTrack1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:clickable="true" android:focusable="true" android:gravity="center" android:padding="10dp" android:text="Hutan" android:textSize="12sp" android:textStyle="bold" />
+            <TextView android:id="@+id/chipTrack2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:clickable="true" android:focusable="true" android:gravity="center" android:padding="10dp" android:text="Malam" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+        <TextView style="@style/SqCaption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Volume musik" />
+        <SeekBar android:id="@+id/seekBgm" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_icon_tile"
+                android:padding="9dp"
+                android:src="@drawable/ic_download"
+                android:tint="@color/sq_green_2" />
+
+            <TextView
+                style="@style/SqSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Pembaruan Aplikasi" />
+        </LinearLayout>
+
+        <TextView style="@style/SqCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Perbarui langsung dari dalam aplikasi tanpa uninstall. Vault, level, EXP, streak, dan inventory tetap aman." />
+        <TextView android:id="@+id/tvUpdateVersion" style="@style/SqBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/rowUpdateSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_btn_ghost"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="14dp">
+            <TextView style="@style/SqBody" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Sumber update" />
+            <TextView android:id="@+id/tvUpdateSource" style="@style/SqBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swUpdateAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Cek pembaruan otomatis (tiap 12 jam)"
+            android:textColor="@color/sq_text"
+            android:textSize="14sp" />
+
+        <TextView android:id="@+id/tvUpdateStatus" style="@style/SqCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="vertical">
+            <TextView android:id="@+id/btnCheckUpdate" style="@style/SqBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cek pembaruan sekarang" />
+            <TextView android:id="@+id/btnRestoreSnapshot" style="@style/SqBtnGhost" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Pulihkan snapshot sebelum update" />
+        </LinearLayout>
+    </LinearLayout>
+        <TextView
+            android:id="@+id/tvVersion"
+            style="@style/SqCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="SaveQuest v2.1" />
+    </LinearLayout>
+</ScrollView>

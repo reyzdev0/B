@@ -1,0 +1,11 @@
+<resources>
+    <style name="Theme.SaveQuest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/sq_green_1</item>
+        <item name="colorSecondary">@color/sq_green_1</item>
+        <item name="android:windowBackground">@color/sq_bg</item>
+        <item name="android:statusBarColor">@color/sq_bg</item>
+        <item name="android:navigationBarColor">@color/sq_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorPrimary">@color/sq_text</item>
+    </style>
+</resources>

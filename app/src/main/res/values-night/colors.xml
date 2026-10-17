@@ -1,0 +1,15 @@
+<resources>
+    <color name="sq_bg">#0E1218</color>
+    <color name="sq_surface">#181D26</color>
+    <color name="sq_surface_alt">#202733</color>
+    <color name="sq_text">#EAF0F7</color>
+    <color name="sq_text_dim">#93A0B2</color>
+    <color name="sq_stroke">#2A3340</color>
+    <color name="sq_icon_inactive">#9AA7B8</color>
+    <color name="sq_locked">#3A4452</color>
+    <color name="sq_heat_0">#232B36</color>
+    <color name="sq_heat_1">#0E4429</color>
+    <color name="sq_heat_2">#006D32</color>
+    <color name="sq_heat_3">#26A641</color>
+    <color name="sq_heat_4">#39D353</color>
+</resources>
